@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: 12345678
+  flyway:
+    enable: true
+    encoding: UTF-8
+    sql-migration-prefix: V_
+    out-of-order: true
+    ignore-failed-future-migration: true
