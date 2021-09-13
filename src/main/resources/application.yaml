@@ -1,11 +1,19 @@
 spring:
+  h2:
+    console:
+      enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/test
-    username: postgres
-    password: 12345678
+#    url: jdbc:postgresql://localhost:5432/test
+#    username: postgres
+#    password: 12345678
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
   flyway:
     enable: true
     encoding: UTF-8
     sql-migration-prefix: V_
     out-of-order: true
     ignore-failed-future-migration: true
+server:
+  port: 9305
